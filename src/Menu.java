@@ -1,8 +1,11 @@
 import java.util.Scanner;
 
 public class Menu {
+	
 	public static void main(String[] args) {
 		Formulario formulario = new Formulario();
+		
+		
 		formulario.chamaFormulario();;
 		
 		
@@ -11,6 +14,9 @@ public class Menu {
 	}
 	
 	public static void chamarMenu() {
+		cadastrarPets cadastrar = new cadastrarPets();
+		Pet pet = new Pet();
+		
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("\n1.Cadastrar um novo pet");
 		System.out.println("2.Alterar os dados do pet cadastrado");
@@ -27,7 +33,9 @@ public class Menu {
 			if((opcao < '1' || opcao > '6') && opcao == '\b' ) {
 				System.out.println("Erro: Digite apenas numeros entre 1 e 6");
 			}else if(opcao == '1') {
-				System.out.println("Teste");
+				cadastrar.cadastrar();
+			}else if(opcao == '4') {
+				pet.listar();
 			}else if(opcao == '6') {
 				break;
 			}

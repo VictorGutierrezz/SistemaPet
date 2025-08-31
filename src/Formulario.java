@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class Formulario {
 	
-	public static void  chamaFormulario() {
+	public  void  chamaFormulario() {
 		File file = new File("C:\\Users\\victo\\Java_eclipse\\Projects\\SistemaPet\\src\\Formulario.txt");
 		try {
 			Scanner scan = new Scanner(file);
